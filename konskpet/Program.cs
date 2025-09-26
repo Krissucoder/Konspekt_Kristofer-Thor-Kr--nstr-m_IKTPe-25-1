@@ -218,3 +218,91 @@ else if (favColour =="roosa")
 }
 else
     Console.WriteLine("The colour has maybe changed!!!!!");
+
+
+
+/*ISESEISEV TÜLESANNE */
+//# Kolija kalkulaator - Kirjuta programm mis:
+//# - Küsib kasutajalt kas ta tahab ära mõõta pappkasti või õlitünni.
+//# - olenevalt kasutaja sisestusest küsib ta:
+//# - - tünni jaoks:
+//# - - - kas kasutaja teab põhja raadiust (r) või põhja läbimõõtu (d):
+//# - - - tünni kõrgust
+//# - - - kaane paksust (kaane paksus võtab tünni kõrgusest maha, kuna kaan võtab tünni sisust natuke ruumi)
+//# - - - Arvutab tünni ruumala mahu, tünni küljepindala, tünni kogupindala
+//# - - kasti jaoks:
+//# - - - Kas kast on kuubiku kujuline või risttahuka kujuline
+//# - - - - kui on kuubik, siis küsib kasutajalt ainult küljepikkust
+//# - - - - kui on risttahukas siis küsib kasutajalt:
+//# - - - - - pikima külje pikkust,
+//# - - - - - lühima külje pikkust ja
+//# - - - - - kasti kõrgust
+//# - - arvutab vastavalt kasti kogupindala, mahu, ja pikima läbiva joone (d)
+
+
+Console.WriteLine("Tere, kas sa tahad ära mõõta pappkasti või õlitünni");
+string õlitünn = Console.ReadLine();
+string pappkasti = Console.ReadLine();
+Console.WriteLine("Tere, kas sa tahad ära mõõta pappkasti või õlitünni?");
+string valik = Console.ReadLine().ToLower();
+
+if (valik == "õlitünni" || valik == "õlitünn")
+{
+    Console.WriteLine("Kas soovid sisestada raadiuse (r) või läbimõõdu (d)?");
+    string mõõt = Console.ReadLine().ToLower();
+
+    double raadius = 0;
+
+    if (mõõt == "r")
+    {
+        Console.Write("Sisesta tünni sisemine raadius (cm): ");
+        raadius = double.Parse(Console.ReadLine()) / 100.0; // muundame meetriteks
+    }
+    else if (mõõt == "d")
+    {
+        Console.Write("Sisesta tünni sisemine läbimõõt (cm): ");
+        double d = double.Parse(Console.ReadLine());
+        raadius = d / 2.0 / 100.0;
+    }
+    else
+    {
+        Console.WriteLine("Vigane valik.");
+        return;
+    }
+
+    Console.Write("Sisesta tünni kõrgus (cm): ");
+    double kõrgus = double.Parse(Console.ReadLine()) / 100.0;
+
+    Console.Write("Sisesta seina paksus (mm): ");
+    double paksus = double.Parse(Console.ReadLine()) / 1000.0;
+
+    double pindala = 2 * Math.PI * raadius * kõrgus; // külgpindala
+    double ruumala = Math.PI * Math.Pow(raadius, 2) * kõrgus; // maht
+
+    Console.WriteLine($"\n--- Õlitünni andmed ---");
+    Console.WriteLine($"Külgpindala: {pindala:F3} m²");
+    Console.WriteLine($"Maht: {ruumala:F3} m³");
+}
+else if (valik == "pappkasti" || valik == "pappkast")
+{
+    Console.Write("Sisesta kasti pikkus (cm): ");
+    double pikkus = double.Parse(Console.ReadLine()) / 100.0;
+
+    Console.Write("Sisesta kasti laius (cm): ");
+    double laius = double.Parse(Console.ReadLine()) / 100.0;
+
+    Console.Write("Sisesta kasti kõrgus (cm): ");
+    double kõrgus = double.Parse(Console.ReadLine()) / 100.0;
+
+    double ruumala = pikkus * laius * kõrgus;
+    double pindala = 2 * (pikkus * laius + pikkus * kõrgus + laius * kõrgus);
+
+    Console.WriteLine($"\n--- Pappkasti andmed ---");
+    Console.WriteLine($"Kogupindala: {pindala:F3} m²");
+    Console.WriteLine($"Maht: {ruumala:F3} m³");
+}
+else
+{
+    Console.WriteLine("Tundmatu objekt. Palun vali kas 'pappkasti' või 'õlitünni'.");
+}
+
