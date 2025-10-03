@@ -296,3 +296,43 @@ else if (valik == "kast")
     }
 
 }
+
+Console.WriteLine("banana");
+// console -> adresseritav moodul või objekt (roheline)
+// . -> midagi selle objekti seest, sarnane windowsi kausta pahtis oleva slashiga
+// Writeline -> adresseritav funktsioon objektist Console
+// () -> sulupaar mis omab endas funktsioonile vajalikku infot
+//     - saab kasutada ka if tingimuslauses oleva tingimuse piiramiseks, ehk teisisõnu "ifi parameter"
+// [] -> tähistab massiive
+// [] -> koodiplokk, tavaliselt pärast tingimust või funktisiooni kirjeldust.
+//      - saab ka kasutada teksti sees muutujate kuvamiseks
+// -> taane aitab arendajal aru saada illise koodiplokki sees, miski on. Vajalik ka kompilaatorile.
+// "banana" -> parameeter is antakse funktsioonile WriteLine töötlememiseks kaasa.
+// ; -> iga koodilause lõppeb komakooloniga
+
+int muutuja = 3;
+//int -> muutuja nime eesolev andmetüübi kirjeldus. See näitab ära mis tüüpi andmed selle muutuja sees on
+// = -> võrdusmärk omistab sellele muutujale mingisuguse väärtuse
+// 3 -> väärtus mis sellele muutujale omistatakse
+
+//võimalikud andmetüübid;
+int a = 1; //täisarv
+decimal b = 2.0M; // kümnendasüsteemis olev komakohaga arv
+float c = 3.0f; // kümnendasüsteemis olev ujukomaga arv
+double d = 4.0d; // kümnendasüsteemis olev komakohaga arv, sarnane decimaliga
+char c1 = 'a';//üksainus täht või tähemärk
+string s = "tekst"; // inimiloetaval kujul tekst
+var x = "abc"; //ebamäärase tüübiga kohalik muutuja.
+var y = 123;
+const int z = 3; //konstant-tüüpi muutujad ei saa muuta, ned on read-only
+
+//põhilised matemaatilised tehted
+int liitimine = 1 + 1; //liitmine, kaks arvu kokku
+int lahutamine = 1 - 1; //lahutamine, esimene arv maha teisest
+int korrutamine = 1 * 1; //korrutamine, esimene arv korrutatakse teisega
+int jagamine = 1 / 1; //jagamine. esimene arv jagatatakse teisega
+double astendamine = Math.Pow(2, 2); //astendamine, esimene arv astendatakse teisega
+double juurimine = Math.Sqrt(2); //ruutjuur, parameetriks arv mida juuritakse
+
+
+
