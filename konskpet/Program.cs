@@ -304,7 +304,7 @@ Console.WriteLine("banana");
 // () -> sulupaar mis omab endas funktsioonile vajalikku infot
 //     - saab kasutada ka if tingimuslauses oleva tingimuse piiramiseks, ehk teisisõnu "ifi parameter"
 // [] -> tähistab massiive
-// [] -> koodiplokk, tavaliselt pärast tingimust või funktisiooni kirjeldust.
+// {} -> koodiplokk, tavaliselt pärast tingimust või funktisiooni kirjeldust.
 //      - saab ka kasutada teksti sees muutujate kuvamiseks
 // -> taane aitab arendajal aru saada illise koodiplokki sees, miski on. Vajalik ka kompilaatorile.
 // "banana" -> parameeter is antakse funktsioonile WriteLine töötlememiseks kaasa.
@@ -334,5 +334,132 @@ int jagamine = 1 / 1; //jagamine. esimene arv jagatatakse teisega
 double astendamine = Math.Pow(2, 2); //astendamine, esimene arv astendatakse teisega
 double juurimine = Math.Sqrt(2); //ruutjuur, parameetriks arv mida juuritakse
 
+int arv = 0; // sobib
+string sõne = "abc";
+string sisend_string = "abc";
+//string string = "abc" ei sobi järgnevad sõnad;
 
+//muutuja nimeks ei sobi järgnevad sõnad;
+//abstract as, base, bool, brake, byte, case
+//catch, char, checked,class,,const,continue,decimal,
+//deafult,delegate,do,double,else,enum,event,
+//explicit,extern,false,finally,fixed,float,for
+//foreach,goto, if,implicit,in,int,
+//interface,iternal,is,lock,long,namespace,paramas,
+//private,protected,public,readonly,ref,return,sybte,
+//sealed,short,sizeof,stackalloc,static,string,struct,
+//switch,this,throw,true,try,typoof,uint,
+//ulong,unchecked,unsafe,ushort,using,virtual,void
+//volatile,while.
+
+//ülesanne, kasutada süntaksiseletust, kirjelda kommentaariga iga koordida 
+
+
+
+
+int arv1 = 0;
+//see on esimene arv
+// = -> võrdusmärk omistab sellele muutujale mingisuguse väärtuse
+// 0 -> väärtus mis sellele muutujale omistamiseks
+//int -> muutuja nime eesolev andmetüübi kirjeldus. See näitab ära mis tüüpi andmed selle muutuja sees on
+
+int arv2 = 0;
+//see on teine arv,muutuja nime ees olev andmetüüp, see näitab ära mis tüüpi andmed selle muutuja sees on
+// = -> võrdusmärk omistab sellele muutujale mingisuguse väärtuse
+// 0 -> väärtus mis sellele muutujale omistamiseks
+
+Console.WriteLine("Tere, palun sisesta esimene liidetav arv: ");
+//Adresseerimine modulit "console", punkti abil ütleme et kasutame
+//funsktsiooni writeline, et kasutajale öelda sõnum mis asub funsktsiooni
+//taga olevate sulgude vahel; antud rida lõppeb lauselõpumärgiga
+
+arv1 = int.Parse(Console.ReadLine());
+//instantseerime muutuja "arv1", ning et sinna saab panna täisarve andmetüübisõnaga int, selle muutuja sisse omistame tulemuse
+// mille saame kasutajalt Console.readline() abil kasutame moodulist "console" realugemisfunktsiooni, ning teisendame int admetüübis
+//asuva funkstsiooni "Parse" abil kasutajasisendi täisarvuks. Lause lõppeb lauselõppumärgiga;
+Console.WriteLine("Tere, palun sisesta esimene liidetav: ");
+arv2 = int.Parse(Console.ReadLine());
+//instantseerime muutuja "arv2", ning et sinna saab panna täisarve andmetüübisõnaga int, selle muutuja sisse omistame tulemuse
+// mille saame kasutajalt Console.readline() abil kasutame moodulist "console" realugemisfunktsiooni, ning teisendame int admetüübis
+//asuva funkstsiooni "Parse" abil kasutajasisendi täisarvuks. Lause lõppeb lauselõppumärgiga;
+Console.WriteLine("Missugust tehet soovid teha? Kirjuta kas: + - / *");
+//Adresseerimine modulit "console", punkti abil ütleme et kasutame funktsiooni writeline et kasutajale öelda sõnum
+// mis asub funkstiooni taga olevate sulgude vahel, antud rida lõppeb lauselõpumärgiga.
+string tehtetyyp = Console.ReadLine();
+//tekitame muutuja "thetetyyp" mille ette paneme andmetüüpi string ehk ütleme et seal on tekst ning võrdusmärgi abil omistame talle
+//konsooli rea pealt loetu info, mis saame kasutades "Console" mooduli, readline() funktsiooni. lause lõppeb lauselõpumärgiga;
+int tulemus = 0;
+//instantsieerime muutja tulemus, mille andmetüübiks on int, ja omistame talle esialgu väärtuse 0.Lause lõpp lõüeb lauselõpumärgiga
+
+
+
+
+if (tehtetüüp == "+"  /*tingimus siia:*/)
+//if->kood mis käivitub siis on kui tiggimus õige
+//==-> kontrollib kas pool A on sama mis pool B
+//teeme tingimuselause if ning sulgude vahele kirjutame tingimuseks kontrolli. kas muutuja tehtetüüp sisu on samal kujul kui sõnr "+"
+
+
+{
+    tehe = arv1 + arv2;
+    //liitmine, kaks arvu kokku
+    //==-> kontrollib kas pool A on sama mis pool B
+    //peale tingimust on koodiplokk mis {} loogiliste sulgude vahel. Koodiplokk sisaldab endas ühte rida,kus muutujasse tulemus omistatakse nüüd väärtus liites kokku 
+    //muutuja arv1 ja muutuja arv2. Luase lõppeb lauselõpumärgiga sulgude sees
+}
+
+if (tehtetüüp == "*" /*tingimus siia:*/)
+//if->kood mis käivitub siis on kui tiggimus õige
+//==-> kontrollib kas pool A on sama mis pool B
+//teeme tingimuselause if ning sulgude vahele kirjutame tingimuseks kontrolli. kas muutuja tehtetüüp sisu on samal kujul kui sõnr "*"
+
+{
+    tehe = arv1 + arv2;
+    //korrutamine, esimene arv korrutatakse teisega
+    //==-> kontrollib kas pool A on sama mis pool B
+    //peale tingimust on koodiplokk mis {} loogiliste sulgude vahel. Koodiplokk sisaldab endas ühte rida,kus muutujasse tulemus omistatakse nüüd väärtus liites kokku 
+    //muutuja arv1 ja muutuja arv2. Luase lõppeb lauselõpumärgiga sulgude sees
+}
+
+
+if (tehtetüüp == "/" /*tingimus siia*/)
+//if->kood mis käivitub siis on kui tiggimus õige
+//==-> kontrollib kas pool A on sama mis pool B
+//teeme tingimuselause if ning sulgude vahele kirjutame tingimuseks kontrolli. kas muutuja tehtetüüp sisu on samal kujul kui sõnr "/"
+{
+    tehe = arv1 + arv2;
+    //jagamine. esimene arv jagatatakse teisega
+    //peale tingimust on koodiplokk mis {} loogiliste sulgude vahel. Koodiplokk sisaldab endas ühte rida,kus muutujasse tulemus omistatakse nüüd väärtus liites kokku 
+    //muutuja arv1 ja muutuja arv2. Luase lõppeb lauselõpumärgiga sulgude sees
+}
+
+
+
+
+
+if (tehtetüüp == "-"  /*tingimus siia */)
+//if->kood mis käivitub siis on kui tiggimus õige
+//==-> kontrollib kas pool A on sama mis pool B
+//teeme tingimuselause if ning sulgude vahele kirjutame tingimuseks kontrolli. kas muutuja tehtetüüp sisu on samal kujul kui sõnr "-"
+{
+    tehe = arv1 + arv2;
+    //lahutamine, esimene arv maha teisest
+    //peale tingimust on koodiplokk mis {} loogiliste sulgude vahel. Koodiplokk sisaldab endas ühte rida,kus muutujasse tulemus omistatakse nüüd väärtus liites kokku 
+    //muutuja arv1 ja muutuja arv2. Luase lõppeb lauselõpumärgiga sulgude sees
+}
+if (tehtetyyp == "^")
+//teeme tingimuselause if ning sulgude vahele kirjutame tingimuseks kontrolli. kas muutuja tehtetüüp sisu on samal kujul kui sõnr "^"
+{
+    tulemus = (int)Math.Pow(arv1, arv2);
+
+}
+//peale tingimust on koodiplokk mis {} loogiliste sulgude vahel. Koodiplokk sisaldab endas ühte rida,kus muutujasse tulemus omistatakse nüüd väärtus liites kokku 
+//muutuja arv1 ja muutuja arv2. Luase lõppeb lauselõpumärgiga sulgude sees
+//moodulist "Math" punkti abil funkstiooni "Pow()", selle sees on arv1 astendatavana esimene parameeter, ning arv2 astendajana teine parameeter 
+
+Console.WriteLine($"{tehtetüüp} Tehte tulemus: {tehe}");
+//Adresseerimine modulit "console", punkti abil ütleme et kasutame sealt funkstsiooni "writeline" koos sulgude vahel parameetriga tulemus, et kuvada kasutajale tehte vastus
+// lause lõppeb lauselõpumärgiga
+//taga olevate suhlude vahel; antud rida lõppeb lauselõpumärgiga
+//{} -> koodiplokk, tavaliselt pärast tingimust või funktisiooni kirjeldust.
 
