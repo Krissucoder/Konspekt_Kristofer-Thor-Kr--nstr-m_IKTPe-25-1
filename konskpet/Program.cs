@@ -554,6 +554,29 @@ else if (true) { } //kaitstud sõnad else ja if (else if) kutsuvad esile sekunda
 else { } //kaitstud sõna else kutsub esile järelltingimuse. millele peab eelnema kes if või else if,ning mille koodi-
 //ploki sisu täidetaks kõikide if ja else if sees olevate tingimuste läbikukkumisel.
 
+int option = 3; // -------
+switch (option) //"switch" on kaitstud sõna alternatiivse tingimuskontrolli joaks mida saab if else-if asemal kasutada.
+{
+
+    //sulgude vahele käib muutuja nimi, mille põhjal tigimuslik ümberülitus toimub. Siin sulugude vahel
+    //ei ole tingimuse ise, vaid kõigest kontrollitav muutuja, või omakorda sulgude vahel m uu tingimus.
+    //pärast lülitusvalikut tuleb koodiplokk
+    case 1:  //koodiplok´i seesa on erinevad juhtumid. juhtuit kontrollitakse kaitstud sõna "case" abil. Antud juhul
+             //kontrollitakse, kas muutujas on väärtus 1, milllele järgeneb  koolon ":"
+             //peale koolonit kirjeldatakse tehtav tegevus
+        break;//ja kui tegevus on täidetud, väljutakse kogu switch tegevust kaitstud sõna "brake"iga. Peale "break"i
+    //on lauselõpumärk ";"
+    case 2:
+        break;
+    case 3:
+        break;
+//juhtumeid võib olla mitemid, antud juhul on neid kolm kindalt, ja üks mida tehekase igal muul juhul.
+//kaitstud sõna "default" avab juhtumi kui muutujas ei ole mitte ühtegi muud "case" juhtumi tingimust.
+//ka default lõppeb sõnaga 
+    default:
+        break;
+
+}
 /*Loogilised tehted */
 //&& -> Loogiline tehe, mida kasutatakse tingimuste kirjutamisel, ning mis annab positiivse vastuse (true) juhul kui
 //      mõlemal pool && märki olevad tingimused on täidetud.Kui üks neist ei ole, siis annab negatiivse vastuse (false).
@@ -599,3 +622,14 @@ do // "do" on kaitsus sõna, mis alustab do-while tsüklit pärast mida on koodi
     // Sulgude vahel on parameeter – tekst, mis kuvatakse kasutajale
     // Lause lõppeb semikooloniga (;)
 
+                // 2. while 
+
+int i = 1; //tsüklimuutuja mis kontrollib "while" tsükli lööd
+while (i < 5) //"while" on kaitstud sõna mis alustab while tsükli varianti, ilma "do"-ta, ning vajab tihtipeale välist tsüklimuutujat
+              //antud juhul on selleks i. Tsükli ingimus, mis peale "while" sõna on,sulgude vahel, kontrollibki tingimuse abil, selle
+              //muutuja olekut. Siin kontrollitakse, et tsükkel ei ole suurem kui 5, kui ta on, siis tsükli töö lõppeb.
+{
+    //koodiplokk kus midagi ehakse
+    i++; //ning seejärel muudetatakse tsüklimuutuja "i" olekut, antud juhul liidetakse 1 juurde
+
+}
