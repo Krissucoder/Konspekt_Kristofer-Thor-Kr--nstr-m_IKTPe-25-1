@@ -473,20 +473,41 @@ if (ostusumma > 100)
 
 {
     Console.WriteLine("Saad 20% allahindlust!");
+    // peale tingimust on koodiplokk, mis {} loogiliste sulgude vahel.
+    // Koodiplokk sisaldab ühte rida, kus kasutame Console.WriteLine funktsiooni, et kuvada kasutajale sõnum "Saad 20% allahindlust!"
+    // Funktsioon Console.WriteLine kuulub Console moodulisse, mille kaudu saame teksti ekraanile printida.
 }
 else if (ostusumma < 101 && ostusumma > 50)
+// teeme tingimuslause else if, mis kontrollib järgmist summakategooriat, kui eelmine if ei olnud tõene
+// Kas muutuja ostusumma on suurem kui 50 (aga kindlasti väiksem või võrdne 100-ga, kuna eelmine if ei käivitunud)
+
 {
     Console.WriteLine("Saad 10% allahinflust");
+    // Koodiplokk {} sees kuvab sõnumi ekraanile, et klient saab 10% allahindlust
+
 }
 else if (ostusumma < 51 && ostusumma > 20)
+// teeme tingimuslause else if, mis kontrollib summat 20 ja 50 vahel
 {
     Console.WriteLine("Saad 5% allahindlust");
+    // Kuvame sõnumi ekraanile 5% allahindluse kohta
 }
 else if (ostusumma < 21)
+// teeme tingimuslause else if ning sulgude vahele kirjutame tingimuseks kontrolli,
+// kas muutuja ostusumma väärtus on väiksem kui 21
+// < tähendab "väiksem kui"
 {
     Console.WriteLine("Allahindlust ei saa :(");
 }
+// peale tingimust on koodiplokk, mis {} loogiliste sulgude vahel.
+    // Koodiplokk sisaldab ühte rida, kus kasutame Console.WriteLine funktsiooni, et kuvada kasutajale sõnum "Saad 20% allahindlust!"
+    // Funktsioon Console.WriteLine kuulub Console moodulisse, mille kaudu saame teksti ekraanile printida.
 else if (ostusumma < 1)
+// else if on tingimuslause, mis käivitub ainult siis,
+// kui eelmine if või else if tingimus ei olnud tõene
+// sulgude sees on tingimus, mida kontrollitakse (ostusumma > 50)
+// kui see tingimus on tõene, käivitatakse koodiplokk {}
+
 {
     Console.WriteLine("Susestatud vigane arv");
 }
@@ -574,3 +595,7 @@ do // "do" on kaitsus sõna, mis alustab do-while tsüklit pärast mida on koodi
 {
 
 } while (true); //niikaua kuni while järel olevate sulgude vahel olev tingimuse on täidetud.
+    // Adresseerime moodulit "Console" ja punktiga kasutame sealt funktsiooni "WriteLine"
+    // Sulgude vahel on parameeter – tekst, mis kuvatakse kasutajale
+    // Lause lõppeb semikooloniga (;)
+
