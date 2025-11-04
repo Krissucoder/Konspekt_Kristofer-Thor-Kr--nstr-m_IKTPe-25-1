@@ -633,3 +633,30 @@ while (i < 5) //"while" on kaitstud sõna mis alustab while tsükli varianti, il
     i++; //ning seejärel muudetatakse tsüklimuutuja "i" olekut, antud juhul liidetakse 1 juurde
 
 }
+// 3. for
+int kogus = 6; //muutuja mida tsükkel kasutab töötlemiseks mingisugusel kujul
+for (int k = 0; k < kogus; k++)//kaitstud sõna "for" alustab for tsüklit, pärast mida on sulud, mille vahel on kõik tsükli töö joaks
+//vajalik info. esimene parameeter tekitab tsükli tõõ joaks muutuja "int k = 0;",teine parameeter on
+//tingimuslause mis kontrollib tingimuse täitumist "k < kogus; ning kolmas inkementeerib tekitatud
+//muutujat "k++;".pane tähele et iga sulgude vahel oleva osa järel on lauselõpumärk. Tsükli tööd
+//kontrolliv tingimuslause koosneb kolmest reast, mitte ühest, nagu while, või do-while puhul.
+//koodiplokk kus tehakse mingi tegevus
+//antud juhul on tegevuseks muutuja "K" arvu väljakuvamine
+{
+    Console.WriteLine(k);
+}
+//võimalikud komposiitandmetüübid:
+// [] -> Massiiv on komposiitandmetüüp, mille sees saab olla mitemid samat tüüpi lihtandmeid. Massiivi tähistatakse kantsusulgude.
+//       Massiive saab olla ükskõik millest lihtandmetüüpi massiive.
+// Massiivi tekitamisel tuleb ära öelda kui pikk või suur massiiv on
+//Massiiv saab  olla koostatud ka teistest massiividest
+
+int[] arvuMassiiv = new int[3];//andmetüüp int väljendab et tegu on täisarvutüüpi andmega ja kantsulud väljendavad et tegu ühltasi
+//ka massiiviga. nimeks on "arvuMassiiv" ja võrdusmärgiga, on esimene tekitusmoodus öelda et tegu on
+//uue massiiviga kasutades kaitstud sõna "new", ja sellele järgneb massiivi pikkuse sätestus "int[3]"
+//see tähendab et sii massiivis on 3 elementi, mis on täisarvud.
+int[] arvuMassiiv2 = [1, 2, 3]; //teine massiivi tekitusviis, kus järjendi pikkuse sätestamise aseal, pannakse elemendid kohe sisse
+//järjendi pikkus tuletatakse elementi arvust
+// -- massiivi sisesmised meetodid:
+//massiivi meetod "Lenght" mille me saame kasutusele võtta punkti abil, loendab kokku, mitu
+//elementi järjendis
