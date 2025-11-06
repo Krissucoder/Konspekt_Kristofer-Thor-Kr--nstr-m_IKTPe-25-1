@@ -2,6 +2,7 @@
 
 //1. tuvasta võrdlus tühja stringiga, string andmetüüp
 using System.ComponentModel.Design;
+using System.Numerics;
 
 //Console.WriteLine("Tere kasutaja, kuidas on sinu nimi?;");
 //string nimi = Console.ReadLine();
@@ -661,58 +662,222 @@ using System.ComponentModel.Design;
 ////massiivi meetod "Lenght" mille me saame kasutusele võtta punkti abil, loendab kokku, mitu
 ////elementi järjendis
 
-    string valik = "";
+//string valik = "";
 
-    while (true)
-    {
-        Console.WriteLine("Tere! Millise kujuga on su tuba?");
-        Console.WriteLine("1 - Ristkülik");
-        Console.WriteLine("2 - Kolmnurk");
-        Console.WriteLine("3 - Ring");
-        Console.WriteLine("Kirjuta 'välju' kui soovid lõpetada.");
-        Console.Write("Vali number või käsk: ");
-        valik = Console.ReadLine()?.Trim().ToLower();
+//while (true)
+//{
+//    Console.WriteLine("Tere! Millise kujuga on su tuba?");
+//    Console.WriteLine("1 - Ristkülik");
+//    Console.WriteLine("2 - Kolmnurk");
+//    Console.WriteLine("3 - Ring");
+//    Console.WriteLine("Kirjuta 'välju' kui soovid lõpetada.");
+//    Console.Write("Vali number või käsk: ");
+//    valik = Console.ReadLine()?.Trim().ToLower();
 
-        if (valik == "välju")
-        {
-            Console.WriteLine("Aitäh! Programm lõpetatud.");
-            break;
-        }
+//    if (valik == "välju")
+//    {
+//        Console.WriteLine("Aitäh! Programm lõpetatud.");
+//        break;
+//    }
 
-        if (valik == "1")
-        {
-            Console.Write("Sisesta toa pikkus: ");
-            double pikkus = Convert.ToDouble(Console.ReadLine());
+//    if (valik == "1")
+//    {
+//        Console.Write("Sisesta toa pikkus: ");
+//        double pikkus = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Sisesta toa laius: ");
-            double laius = Convert.ToDouble(Console.ReadLine());
+//        Console.Write("Sisesta toa laius: ");
+//        double laius = Convert.ToDouble(Console.ReadLine());
 
-            double pindala = pikkus * laius;
-            Console.WriteLine("Ristküliku toa pindala on: " + pindala + " ruutmeetrit.");
-        }
-        else if (valik == "2")
-        {
-            Console.Write("Sisesta kolmnurga alus: ");
-            double alus = Convert.ToDouble(Console.ReadLine());
+//        double pindala = pikkus * laius;
+//        Console.WriteLine("Ristküliku toa pindala on: " + pindala + " ruutmeetrit.");
+//    }
+//    else if (valik == "2")
+//    {
+//        Console.Write("Sisesta kolmnurga alus: ");
+//        double alus = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Sisesta kolmnurga kõrgus: ");
-            double kõrgus = Convert.ToDouble(Console.ReadLine());
+//        Console.Write("Sisesta kolmnurga kõrgus: ");
+//        double kõrgus = Convert.ToDouble(Console.ReadLine());
 
-            double pindala = (alus * kõrgus) / 2;
-            Console.WriteLine("Kolmnurga toa pindala on: " + pindala + " ruutmeetrit.");
-        }
-        else if (valik == "3")
-        {
-            Console.Write("Sisesta ringi raadius: ");
-            double raadius = Convert.ToDouble(Console.ReadLine());
+//        double pindala = (alus * kõrgus) / 2;
+//        Console.WriteLine("Kolmnurga toa pindala on: " + pindala + " ruutmeetrit.");
+//    }
+//    else if (valik == "3")
+//    {
+//        Console.Write("Sisesta ringi raadius: ");
+//        double raadius = Convert.ToDouble(Console.ReadLine());
 
-            double pindala = 3.14 * raadius * raadius;
-            Console.WriteLine("Ringi toa pindala on: " + pindala + " ruutmeetrit.");
-        }
-        else
-        {
-            Console.WriteLine("Vale valik! Palun proovi uuesti.");
-        }
-    }
-        
-    
+//        double pindala = 3.14 * raadius * raadius;
+//        Console.WriteLine("Ringi toa pindala on: " + pindala + " ruutmeetrit.");
+//    }
+//    else
+//    {
+//        Console.WriteLine("Vale valik! Palun proovi uuesti.");
+//    }
+
+//Console.WriteLine("Vali kujund: ring, ristkülik või kolmnurk");
+//Console.Write("Sisesta kujundi nimi: ");
+//string kujund = Console.ReadLine().ToLower();
+
+//double pindala = 0;
+
+//if (kujund == "ring")
+//{
+//    Console.Write("Sisesta ringi raadius (cm): ");
+//    double r = double.Parse(Console.ReadLine());
+//    pindala = 3.14 * r * r;
+
+//    Console.WriteLine("=== Ringi andmed ===");
+//    Console.WriteLine("Raadius: " + r + " cm");
+//    Console.WriteLine("Pindala: " + pindala + " cm²");
+//}
+//else if (kujund == "ristkülik")
+//{
+//    Console.Write("Sisesta ristküliku pikkus (cm): ");
+//    double pikkus = double.Parse(Console.ReadLine());
+
+//    Console.Write("Sisesta ristküliku laius (cm): ");
+//    double laius = double.Parse(Console.ReadLine());
+
+//    pindala = pikkus * laius;
+
+//    Console.WriteLine("=== Ristküliku andmed ===");
+//    Console.WriteLine("Pikkus: " + pikkus + " cm");
+//    Console.WriteLine("Laius: " + laius + " cm");
+//    Console.WriteLine("Pindala: " + pindala + " cm²");
+//}
+//else if (kujund == "kolmnurk")
+//{
+//    Console.Write("Sisesta kolmnurga alus (cm): ");
+//    double alus = double.Parse(Console.ReadLine());
+
+//    Console.Write("Sisesta kolmnurga kõrgus (cm): ");
+//    double korgus = double.Parse(Console.ReadLine());
+
+//    pindala = (alus * korgus) / 2;
+
+//    Console.WriteLine("=== Kolmnurga andmed ===");
+//    Console.WriteLine("Alus: " + alus + " cm");
+//    Console.WriteLine("Kõrgus: " + korgus + " cm");
+//    Console.WriteLine("Pindala: " + pindala + " cm²");
+//}
+//else
+//{
+//    Console.WriteLine("Tundmatu kujund. Palun vali kas 'ring', 'ristkülik' või 'kolmnurk'.");
+//}
+
+
+//Console.WriteLine("\nSinu toa pindala on " + pindala + " cm²");
+
+//Console.WriteLine("\n=== Lõpp ===");
+
+//Console.WriteLine("Sisesta ostusumma");
+//double ostusumma = double.Parse(Console.ReadLine());
+//if (ostusumma > 100)
+////Adresseerimine modulit "console", punkti abil ütleme et kasutame sealt funkstsiooni "writeline" koos sulgude vahel parameetriga tulemus, et kuvada kasutajale tehte vastus
+//// lause lõppeb lauselõpumärgiga
+////taga olevate suhlude vahel; antud rida lõppeb lauselõpumärgiga
+////{} -> koodiplokk, tavaliselt pärast tingimust või funktisiooni kirjeldust.
+////Console.ReadLine-Loeb kasutaja sisestatud teksti (numbri).
+////double.Parse-Muudab sisestatud teksti komakohaga arvuks, et saaks matemaatiliselt arvutada
+////double ostusumma =-Loob muutuja nimega ostusumma, kuhu salvestatakse kasutaja sisestatud arv.
+////ka omakorda jutumärkide vahel. Jutumärgid tähistavad sõnet.
+//{
+//    Console.WriteLine("Saad 20% allahindlust!");
+//    // peale tingimust on koodiplokk, mis {} loogiliste sulgude vahel.
+//    // Koodiplokk sisaldab ühte rida, kus kasutame Console.WriteLine funktsiooni, et kuvada kasutajale sõnum "Saad 20% allahindlust!"
+//    // Funktsioon Console.WriteLine kuulub Console moodulisse, mille kaudu saame teksti ekraanile printida.
+//    // //if-kontrollib, kas mingi tingimus on tõene,
+//    //Kui on, siis teeb selle sees oleva käsu.
+//}
+//else if (ostusumma < 101 && ostusumma > 50)
+//// teeme tingimuslause else if, mis kontrollib järgmist summakategooriat, kui eelmine if ei olnud tõene
+//// Kas muutuja ostusumma on suurem kui 50 aga kindlasti väiksem või võrdne 100-ga, kuna eelmine if ei käivitunud
+////Märk && tähendab "ja" – mõlemad tingimused peavad kehtima
+
+//{
+//    Console.WriteLine("Saad 10% allahinflust");
+//    // Koodiplokk {} sees kuvab sõnumi ekraanile, et klient saab 10% allahindlust
+//    //Adresseerimine modulit "console", punkti abil ütleme et kasutame sealt funkstsiooni "writeline" koos sulgude vahel parameetriga tulemus, et kuvada kasutajale tehte vastus
+//    // lause lõppeb lauselõpumärgiga
+//    //taga olevate suhlude vahel; antud rida lõppeb lauselõpumärgiga
+//    //lause "Saad 10% allahindlust" jutumärkide vahel. Jutumärgid tähistavad sõnet
+//}
+//else if (ostusumma < 51 && ostusumma > 20)
+//    // teeme tingimuslause else if, mis kontrollib summat 20 ja 51 vahel
+//    //Märk && tähendab "ja" – mõlemad tingimused peavad kehtima
+//    //ostusumma algne hind või kogusumma enne allahindlust.
+
+//{
+//    Console.WriteLine("Saad 5% allahindlust");
+//    // Kuvame sõnumi ekraanile 5% allahindluse kohta
+//    //Adresseerimine modulit "console", punkti abil ütleme et kasutame sealt funkstsiooni "writeline" koos sulgude vahel parameetriga tulemus, et kuvada kasutajale tehte vastus
+//    // lause lõppeb lauselõpumärgiga
+//}
+//else if (ostusumma < 21)
+//// teeme tingimuslause else if ning sulgude vahele kirjutame tingimuseks kontrolli,
+//// kas muutuja ostusumma väärtus on väiksem kui 21
+//// < tähendab "väiksem kui"
+//{
+//    Console.WriteLine("Allahindlust ei saa :(");
+//}
+//// peale tingimust on koodiplokk, mis {} loogiliste sulgude vahel.
+//// Koodiplokk sisaldab ühte rida, kus kasutame Console.WriteLine funktsiooni, et kuvada kasutajale sõnum "Saad 20% allahindlust!"
+//// Funktsioon Console.WriteLine kuulub Console moodulisse, mille kaudu saame teksti ekraanile printida.
+//else if (ostusumma < 1)
+//// else if on tingimuslause, mis käivitub ainult siis,
+//// kui eelmine if või else if tingimus ei olnud tõene
+//// sulgude sees on tingimus, mida kontrollitakse (ostusumma > 50)
+//// kui see tingimus on tõene, käivitatakse koodiplokk {}
+
+//{
+//    Console.WriteLine("Susestatud vigane arv");
+//    //Console –käsureale, kuhu programm saab teksti väljastada.
+//    //Writeline-see on funktsioon, mis väljastab ekraanile teksti ja liigub uuele reale.
+//    //Kui ükski eelnevatest ostusumma kontrolli tingimustest ei kehti, tähendab see  et kasutaja sisestas vale arvu ja programm ei tööta
+//    //ka omakorda jutumärkide vahel. Jutumärgid tähistavad sõnet.
+
+
+string valik;
+double pindala = 0;
+
+Console.WriteLine("Tere! Kas sinu tuba on kolmnurk, ristkülik või ring?");
+valik = Console.ReadLine();
+
+if (valik == "kolmnurk")
+{
+    Console.WriteLine("Sisesta A külg:");
+    double a_külg = double.Parse(Console.ReadLine());
+    Console.WriteLine("Sisesta B külg:");
+    double b_külg = double.Parse(Console.ReadLine());
+    Console.WriteLine("Sisesta C külg:");
+    double c_külg = double.Parse(Console.ReadLine());
+
+
+    pindala = (a_külg + b_külg + c_külg) / 2;
+
+    Console.WriteLine("Kolmnurga pindala on " + pindala + " ruutmeetrit");
+}
+else if (valik == "ristkülik")
+{
+    Console.WriteLine("Sisesta ristküliku pikkus:");
+    double pikkus = double.Parse(Console.ReadLine());
+    Console.WriteLine("Sisesta ristküliku laius:");
+    double laius = double.Parse(Console.ReadLine());
+
+    pindala = pikkus * laius;
+    Console.WriteLine("Ristküliku pindala on " + pindala + " ruutmeetrit");
+}
+else if (valik == "ring")
+{
+    Console.WriteLine("Sisesta ringi raadius:");
+    double raadius = double.Parse(Console.ReadLine());
+
+    pindala = 3.14 * raadius * raadius;
+    Console.WriteLine("Ringi pindala on " + pindala + " ruutmeetrit");
+}
+else
+{
+    Console.WriteLine("Sinu toa pindala on");
+}
+
