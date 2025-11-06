@@ -461,202 +461,258 @@ using System.ComponentModel.Design;
 //Adresseerimine modulit "console", punkti abil ütleme et kasutame sealt funkstsiooni "writeline" koos sulgude vahel parameetriga tulemus, et kuvada kasutajale tehte vastus
 // lause lõppeb lauselõpumärgiga
 //taga olevate suhlude vahel; antud rida lõppeb lauselõpumärgiga
-//{} -> koodiplokk, tavaliselt pärast tingimust või funktisiooni kirjeldust.
+////{} -> koodiplokk, tavaliselt pärast tingimust või funktisiooni kirjeldust.
 
-Console.WriteLine("Sisesta ostusumma");
-double ostusumma = double.Parse(Console.ReadLine());
-if (ostusumma > 100)
-//Adresseerimine modulit "console", punkti abil ütleme et kasutame sealt funkstsiooni "writeline" koos sulgude vahel parameetriga tulemus, et kuvada kasutajale tehte vastus
-// lause lõppeb lauselõpumärgiga
-//taga olevate suhlude vahel; antud rida lõppeb lauselõpumärgiga
-//{} -> koodiplokk, tavaliselt pärast tingimust või funktisiooni kirjeldust.
+//Console.WriteLine("Sisesta ostusumma");
+//double ostusumma = double.Parse(Console.ReadLine());
+//if (ostusumma > 100)
+////Adresseerimine modulit "console", punkti abil ütleme et kasutame sealt funkstsiooni "writeline" koos sulgude vahel parameetriga tulemus, et kuvada kasutajale tehte vastus
+//// lause lõppeb lauselõpumärgiga
+////taga olevate suhlude vahel; antud rida lõppeb lauselõpumärgiga
+////{} -> koodiplokk, tavaliselt pärast tingimust või funktisiooni kirjeldust.
 
-{
-    Console.WriteLine("Saad 20% allahindlust!");
-    // peale tingimust on koodiplokk, mis {} loogiliste sulgude vahel.
-    // Koodiplokk sisaldab ühte rida, kus kasutame Console.WriteLine funktsiooni, et kuvada kasutajale sõnum "Saad 20% allahindlust!"
-    // Funktsioon Console.WriteLine kuulub Console moodulisse, mille kaudu saame teksti ekraanile printida.
-}
-else if (ostusumma < 101 && ostusumma > 50)
-// teeme tingimuslause else if, mis kontrollib järgmist summakategooriat, kui eelmine if ei olnud tõene
-// Kas muutuja ostusumma on suurem kui 50 (aga kindlasti väiksem või võrdne 100-ga, kuna eelmine if ei käivitunud)
-
-{
-    Console.WriteLine("Saad 10% allahinflust");
-    // Koodiplokk {} sees kuvab sõnumi ekraanile, et klient saab 10% allahindlust
-
-}
-else if (ostusumma < 51 && ostusumma > 20)
-// teeme tingimuslause else if, mis kontrollib summat 20 ja 50 vahel
-{
-    Console.WriteLine("Saad 5% allahindlust");
-    // Kuvame sõnumi ekraanile 5% allahindluse kohta
-}
-else if (ostusumma < 21)
-// teeme tingimuslause else if ning sulgude vahele kirjutame tingimuseks kontrolli,
-// kas muutuja ostusumma väärtus on väiksem kui 21
-// < tähendab "väiksem kui"
-{
-    Console.WriteLine("Allahindlust ei saa :(");
-}
-// peale tingimust on koodiplokk, mis {} loogiliste sulgude vahel.
-    // Koodiplokk sisaldab ühte rida, kus kasutame Console.WriteLine funktsiooni, et kuvada kasutajale sõnum "Saad 20% allahindlust!"
-    // Funktsioon Console.WriteLine kuulub Console moodulisse, mille kaudu saame teksti ekraanile printida.
-else if (ostusumma < 1)
-// else if on tingimuslause, mis käivitub ainult siis,
-// kui eelmine if või else if tingimus ei olnud tõene
-// sulgude sees on tingimus, mida kontrollitakse (ostusumma > 50)
-// kui see tingimus on tõene, käivitatakse koodiplokk {}
-
-{
-    Console.WriteLine("Susestatud vigane arv");
-}
-//string kasutajaNimi = "";
-//do
 //{
-//    Console.WriteLine("Palun sisesta oma kasutajanimi");
-//    kasutajaNimi = Console.ReadLine();
+//    Console.WriteLine("Saad 20% allahindlust!");
+//    // peale tingimust on koodiplokk, mis {} loogiliste sulgude vahel.
+//    // Koodiplokk sisaldab ühte rida, kus kasutame Console.WriteLine funktsiooni, et kuvada kasutajale sõnum "Saad 20% allahindlust!"
+//    // Funktsioon Console.WriteLine kuulub Console moodulisse, mille kaudu saame teksti ekraanile printida.
 //}
-//while (kasutajaNimi != "user1");
-//if (kasutajaNimi == "user1")
+//else if (ostusumma < 101 && ostusumma > 50)
+//// teeme tingimuslause else if, mis kontrollib järgmist summakategooriat, kui eelmine if ei olnud tõene
+//// Kas muutuja ostusumma on suurem kui 50 (aga kindlasti väiksem või võrdne 100-ga, kuna eelmine if ei käivitunud)
+
 //{
-//    int ruudusuurus = 0;
+//    Console.WriteLine("Saad 10% allahinflust");
+//    // Koodiplokk {} sees kuvab sõnumi ekraanile, et klient saab 10% allahindlust
 
-//    do
-//    {
-//        Console.WriteLine("Kui suurt ruutu tahad?");
-//        ruudusuurus = int.Parse(Console.ReadLine());
-//    } while (ruudusuurus > 0 && ruudusuurus < 20);
-//    char reaKujund = 'k';
-//    string üksRida = "";
-//    int tsükliMuutuja = ruudusuurus;
-//    do
-//    {
-//        üksRida += "_" + reaKujund;
-//        tsükliMuutuja -= 1;
-//    }
-//    while (tsükliMuutuja != 0);
-//    tsükliMuutuja = ruudusuurus;
-//    do
-//    {
-//        Console.WriteLine(üksRida);
-//        tsükliMuutuja -= 1;
+//}
+//else if (ostusumma < 51 && ostusumma > 20)
+//// teeme tingimuslause else if, mis kontrollib summat 20 ja 50 vahel
+//{
+//    Console.WriteLine("Saad 5% allahindlust");
+//    // Kuvame sõnumi ekraanile 5% allahindluse kohta
+//}
+//else if (ostusumma < 21)
+//// teeme tingimuslause else if ning sulgude vahele kirjutame tingimuseks kontrolli,
+//// kas muutuja ostusumma väärtus on väiksem kui 21
+//// < tähendab "väiksem kui"
+//{
+//    Console.WriteLine("Allahindlust ei saa :(");
+//}
+//// peale tingimust on koodiplokk, mis {} loogiliste sulgude vahel.
+//    // Koodiplokk sisaldab ühte rida, kus kasutame Console.WriteLine funktsiooni, et kuvada kasutajale sõnum "Saad 20% allahindlust!"
+//    // Funktsioon Console.WriteLine kuulub Console moodulisse, mille kaudu saame teksti ekraanile printida.
+//else if (ostusumma < 1)
+//// else if on tingimuslause, mis käivitub ainult siis,
+//// kui eelmine if või else if tingimus ei olnud tõene
+//// sulgude sees on tingimus, mida kontrollitakse (ostusumma > 50)
+//// kui see tingimus on tõene, käivitatakse koodiplokk {}
+
+//{
+//    Console.WriteLine("Susestatud vigane arv");
+//}
+////string kasutajaNimi = "";
+////do
+////{
+////    Console.WriteLine("Palun sisesta oma kasutajanimi");
+////    kasutajaNimi = Console.ReadLine();
+////}
+////while (kasutajaNimi != "user1");
+////if (kasutajaNimi == "user1")
+////{
+////    int ruudusuurus = 0;
+
+////    do
+////    {
+////        Console.WriteLine("Kui suurt ruutu tahad?");
+////        ruudusuurus = int.Parse(Console.ReadLine());
+////    } while (ruudusuurus > 0 && ruudusuurus < 20);
+////    char reaKujund = 'k';
+////    string üksRida = "";
+////    int tsükliMuutuja = ruudusuurus;
+////    do
+////    {
+////        üksRida += "_" + reaKujund;
+////        tsükliMuutuja -= 1;
+////    }
+////    while (tsükliMuutuja != 0);
+////    tsükliMuutuja = ruudusuurus;
+////    do
+////    {
+////        Console.WriteLine(üksRida);
+////        tsükliMuutuja -= 1;
 
 
-//    } while (tsükliMuutuja != 0);
+////    } while (tsükliMuutuja != 0);
 
-/* tingimuselause osad */
-if (true) { }//kaiatstud sõna if kutsub eile tigimuslause, mille tingimus on sulgude vahel ning millele järgneb
-//koodiplokk tigmuse täitumisel teostatava koodiga
-else if (true) { } //kaitstud sõnad else ja if (else if) kutsuvad esile sekundaarse tingimuslause, millele tingimus
-//on samamoodi sulgude vahel, ning millele peab eelnema alati if või else if. Tingimuse täitumisel
-//ja eelneva tingimuse mittetäitumisel teostatakse koodiplokk sees olev kood
-else { } //kaitstud sõna else kutsub esile järelltingimuse. millele peab eelnema kes if või else if,ning mille koodi-
-//ploki sisu täidetaks kõikide if ja else if sees olevate tingimuste läbikukkumisel.
+///* tingimuselause osad */
+//if (true) { }//kaiatstud sõna if kutsub eile tigimuslause, mille tingimus on sulgude vahel ning millele järgneb
+////koodiplokk tigmuse täitumisel teostatava koodiga
+//else if (true) { } //kaitstud sõnad else ja if (else if) kutsuvad esile sekundaarse tingimuslause, millele tingimus
+////on samamoodi sulgude vahel, ning millele peab eelnema alati if või else if. Tingimuse täitumisel
+////ja eelneva tingimuse mittetäitumisel teostatakse koodiplokk sees olev kood
+//else { } //kaitstud sõna else kutsub esile järelltingimuse. millele peab eelnema kes if või else if,ning mille koodi-
+////ploki sisu täidetaks kõikide if ja else if sees olevate tingimuste läbikukkumisel.
 
-int option = 3; // -------
-switch (option) //"switch" on kaitstud sõna alternatiivse tingimuskontrolli joaks mida saab if else-if asemal kasutada.
-{
+//int option = 3; // -------
+//switch (option) //"switch" on kaitstud sõna alternatiivse tingimuskontrolli joaks mida saab if else-if asemal kasutada.
+//{
 
-    //sulgude vahele käib muutuja nimi, mille põhjal tigimuslik ümberülitus toimub. Siin sulugude vahel
-    //ei ole tingimuse ise, vaid kõigest kontrollitav muutuja, või omakorda sulgude vahel m uu tingimus.
-    //pärast lülitusvalikut tuleb koodiplokk
-    case 1:  //koodiplok´i seesa on erinevad juhtumid. juhtuit kontrollitakse kaitstud sõna "case" abil. Antud juhul
-             //kontrollitakse, kas muutujas on väärtus 1, milllele järgeneb  koolon ":"
-             //peale koolonit kirjeldatakse tehtav tegevus
-        break;//ja kui tegevus on täidetud, väljutakse kogu switch tegevust kaitstud sõna "brake"iga. Peale "break"i
-    //on lauselõpumärk ";"
-    case 2:
-        break;
-    case 3:
-        break;
-//juhtumeid võib olla mitemid, antud juhul on neid kolm kindalt, ja üks mida tehekase igal muul juhul.
-//kaitstud sõna "default" avab juhtumi kui muutujas ei ole mitte ühtegi muud "case" juhtumi tingimust.
-//ka default lõppeb sõnaga 
-    default:
-        break;
+//    //sulgude vahele käib muutuja nimi, mille põhjal tigimuslik ümberülitus toimub. Siin sulugude vahel
+//    //ei ole tingimuse ise, vaid kõigest kontrollitav muutuja, või omakorda sulgude vahel m uu tingimus.
+//    //pärast lülitusvalikut tuleb koodiplokk
+//    case 1:  //koodiplok´i seesa on erinevad juhtumid. juhtuit kontrollitakse kaitstud sõna "case" abil. Antud juhul
+//             //kontrollitakse, kas muutujas on väärtus 1, milllele järgeneb  koolon ":"
+//             //peale koolonit kirjeldatakse tehtav tegevus
+//        break;//ja kui tegevus on täidetud, väljutakse kogu switch tegevust kaitstud sõna "brake"iga. Peale "break"i
+//    //on lauselõpumärk ";"
+//    case 2:
+//        break;
+//    case 3:
+//        break;
+////juhtumeid võib olla mitemid, antud juhul on neid kolm kindalt, ja üks mida tehekase igal muul juhul.
+////kaitstud sõna "default" avab juhtumi kui muutujas ei ole mitte ühtegi muud "case" juhtumi tingimust.
+////ka default lõppeb sõnaga 
+//    default:
+//        break;
 
-}
-/*Loogilised tehted */
-//&& -> Loogiline tehe, mida kasutatakse tingimuste kirjutamisel, ning mis annab positiivse vastuse (true) juhul kui
-//      mõlemal pool && märki olevad tingimused on täidetud.Kui üks neist ei ole, siis annab negatiivse vastuse (false).
-// || -> loogiline tehe, mida kasutatakse tingimuste kirjutamisel, ning mis annab positiivse vastuse (true) siis kui 
-//    vähemalt üks tingimus on täidetud. negatiivne vastus (false) tagastakse siis, kui kõik tingimused on täitmata.
-//!  -> loogiline tehe, mida kasutatakse tignimuste tulemuse inverteerimiseks. Tulemus mis muidu tagastaks true, hüüumärgi
-//      puhul tagastab false, ja vastupidi -tulemus mis muidu tagastaks false, hüüumärgi puhul tagastab true.
+//}
+///*Loogilised tehted */
+////&& -> Loogiline tehe, mida kasutatakse tingimuste kirjutamisel, ning mis annab positiivse vastuse (true) juhul kui
+////      mõlemal pool && märki olevad tingimused on täidetud.Kui üks neist ei ole, siis annab negatiivse vastuse (false).
+//// || -> loogiline tehe, mida kasutatakse tingimuste kirjutamisel, ning mis annab positiivse vastuse (true) siis kui 
+////    vähemalt üks tingimus on täidetud. negatiivne vastus (false) tagastakse siis, kui kõik tingimused on täitmata.
+////!  -> loogiline tehe, mida kasutatakse tignimuste tulemuse inverteerimiseks. Tulemus mis muidu tagastaks true, hüüumärgi
+////      puhul tagastab false, ja vastupidi -tulemus mis muidu tagastaks false, hüüumärgi puhul tagastab true.
 
-/* Võrdlusoperaatorid*/
-// == -> on võrdne. Võrdusmärgi ühel pool olev objekt peab vastama täpselt oma olemuselt võrdusmärgi teisel pool oleva objektiga.
-//       ei ole sama nagu üks võrdusmärk. üks võrdusmärk omistab, kaks võrdleb.
-// != -> ei ole võrdne.Võrdusmärgi ühel pool olev objekt *EI TOHI* olla samal kujul nagu teisel pool olev objekt.
-//       Võrdlusoperaator on kombinatsioon "on võrnde" operaatorsit, ja loogiliste tehtest "not".
-// >  -> on suurem kui.Mäegist vasakul pool olev bjekt peaks olema suurem kui paremal olev objekt.
-//<   -> on väiksem kui. Märgist vasakul pool olev objekt peaks olema väiksem, kui paremal pool olev objekt.
-//>=  -> on suurem kui võrdne kui. Märgist vasakul pool olev objekt peaks olema vähemalt võrdne või suurem
-//       kui paremal pool olev objekt. Operaator on kombinatsioon "on võrdne" ja "on suurem kui" operaatoritest.
-// <=  ->on väiksem kui või võrdne kui. Märgist vasakul poo olev objekt peaks olema vähemalt võrnde või väiksem
-//       kui paremal pool olev objekt. Operaator on kombinatsioon "on võrdne" ja "on väiksem kui" operaatortiest.
+///* Võrdlusoperaatorid*/
+//// == -> on võrdne. Võrdusmärgi ühel pool olev objekt peab vastama täpselt oma olemuselt võrdusmärgi teisel pool oleva objektiga.
+////       ei ole sama nagu üks võrdusmärk. üks võrdusmärk omistab, kaks võrdleb.
+//// != -> ei ole võrdne.Võrdusmärgi ühel pool olev objekt *EI TOHI* olla samal kujul nagu teisel pool olev objekt.
+////       Võrdlusoperaator on kombinatsioon "on võrnde" operaatorsit, ja loogiliste tehtest "not".
+//// >  -> on suurem kui.Mäegist vasakul pool olev bjekt peaks olema suurem kui paremal olev objekt.
+////<   -> on väiksem kui. Märgist vasakul pool olev objekt peaks olema väiksem, kui paremal pool olev objekt.
+////>=  -> on suurem kui võrdne kui. Märgist vasakul pool olev objekt peaks olema vähemalt võrdne või suurem
+////       kui paremal pool olev objekt. Operaator on kombinatsioon "on võrdne" ja "on suurem kui" operaatoritest.
+//// <=  ->on väiksem kui või võrdne kui. Märgist vasakul poo olev objekt peaks olema vähemalt võrnde või väiksem
+////       kui paremal pool olev objekt. Operaator on kombinatsioon "on võrdne" ja "on väiksem kui" operaatortiest.
 
-/* Omistusoperaatorid ja kiirtehted */
-int arv = 1;// =  ->  üksik võrdusmärk omsitab muutujale väärtuse.
-arv += 1;   // += -> võrdusmärk mille ees on pluss, automaatselt liidab muutujale otsa võrdusmärgi teisel pool oleva arvu.
-// asendab tehet "arv = arv + 1". on kombinatsioon matematilisest tehtest "+" ja omistamisest ("=")
-arv -= 1;   // -= -> võrdusmärk mille ees on miinus, automaatselt lahutab muutujast maha võrdusmärgi teisel pool oleva väärtuse.
-// asendab tehet "arv = arv -1". on kombinatsioon matemaatiliselt tehtest "-" ja omistamisest ("=")
-arv *= 2;   // *= -> võedusmärk mille ees on korrutusmärk * 2". on kombinatsioon matemaatiliselt tehtest "*" ja omistamisest ("=")
-            //       arvu kordi. asendab teht "arv = *2". on kombinatsioon matematilisest tehtset "*" ja omistaisest ("=")
+///* Omistusoperaatorid ja kiirtehted */
+//int arv = 1;// =  ->  üksik võrdusmärk omsitab muutujale väärtuse.
+//arv += 1;   // += -> võrdusmärk mille ees on pluss, automaatselt liidab muutujale otsa võrdusmärgi teisel pool oleva arvu.
+//// asendab tehet "arv = arv + 1". on kombinatsioon matematilisest tehtest "+" ja omistamisest ("=")
+//arv -= 1;   // -= -> võrdusmärk mille ees on miinus, automaatselt lahutab muutujast maha võrdusmärgi teisel pool oleva väärtuse.
+//// asendab tehet "arv = arv -1". on kombinatsioon matemaatiliselt tehtest "-" ja omistamisest ("=")
+//arv *= 2;   // *= -> võedusmärk mille ees on korrutusmärk * 2". on kombinatsioon matemaatiliselt tehtest "*" ja omistamisest ("=")
+//            //       arvu kordi. asendab teht "arv = *2". on kombinatsioon matematilisest tehtset "*" ja omistaisest ("=")
 
-arv /= 2;   // *= -> võrdusmärk mille ees on jagamismärk /. automaatselt jagab muutuja sisu võrdusmärgi teisel pool oleva 
-            //arvu osadeks. asendab tehet " arv = arv 7 2". on kombinatsioon matematilisest tehetest "/" ja omistamisest
-            // ("=")
-arv++;      // ++ -> on spetsiifiliselt ühe juurd liitmiseks lühivariant.
-arv--;      // -- -> on spetsiifilseslt ühe maha lahutamiseks lühivariant.
+//arv /= 2;   // *= -> võrdusmärk mille ees on jagamismärk /. automaatselt jagab muutuja sisu võrdusmärgi teisel pool oleva 
+//            //arvu osadeks. asendab tehet " arv = arv 7 2". on kombinatsioon matematilisest tehetest "/" ja omistamisest
+//            // ("=")
+//arv++;      // ++ -> on spetsiifiliselt ühe juurd liitmiseks lühivariant.
+//arv--;      // -- -> on spetsiifilseslt ühe maha lahutamiseks lühivariant.
 
-/* Tsüklid */
-// 1. do-while
-do // "do" on kaitsus sõna, mis alustab do-while tsüklit pärast mida on koodiplokk, ning ütleb et tee seda koodi
-{
+///* Tsüklid */
+//// 1. do-while
+//do // "do" on kaitsus sõna, mis alustab do-while tsüklit pärast mida on koodiplokk, ning ütleb et tee seda koodi
+//{
 
-} while (true); //niikaua kuni while järel olevate sulgude vahel olev tingimuse on täidetud.
-    // Adresseerime moodulit "Console" ja punktiga kasutame sealt funktsiooni "WriteLine"
-    // Sulgude vahel on parameeter – tekst, mis kuvatakse kasutajale
-    // Lause lõppeb semikooloniga (;)
+//} while (true); //niikaua kuni while järel olevate sulgude vahel olev tingimuse on täidetud.
+//    // Adresseerime moodulit "Console" ja punktiga kasutame sealt funktsiooni "WriteLine"
+//    // Sulgude vahel on parameeter – tekst, mis kuvatakse kasutajale
+//    // Lause lõppeb semikooloniga (;)
 
-                // 2. while 
+//                // 2. while 
 
-int i = 1; //tsüklimuutuja mis kontrollib "while" tsükli lööd
-while (i < 5) //"while" on kaitstud sõna mis alustab while tsükli varianti, ilma "do"-ta, ning vajab tihtipeale välist tsüklimuutujat
-              //antud juhul on selleks i. Tsükli ingimus, mis peale "while" sõna on,sulgude vahel, kontrollibki tingimuse abil, selle
-              //muutuja olekut. Siin kontrollitakse, et tsükkel ei ole suurem kui 5, kui ta on, siis tsükli töö lõppeb.
-{
-    //koodiplokk kus midagi ehakse
-    i++; //ning seejärel muudetatakse tsüklimuutuja "i" olekut, antud juhul liidetakse 1 juurde
+//int i = 1; //tsüklimuutuja mis kontrollib "while" tsükli lööd
+//while (i < 5) //"while" on kaitstud sõna mis alustab while tsükli varianti, ilma "do"-ta, ning vajab tihtipeale välist tsüklimuutujat
+//              //antud juhul on selleks i. Tsükli ingimus, mis peale "while" sõna on,sulgude vahel, kontrollibki tingimuse abil, selle
+//              //muutuja olekut. Siin kontrollitakse, et tsükkel ei ole suurem kui 5, kui ta on, siis tsükli töö lõppeb.
+//{
+//    //koodiplokk kus midagi ehakse
+//    i++; //ning seejärel muudetatakse tsüklimuutuja "i" olekut, antud juhul liidetakse 1 juurde
 
-}
-// 3. for
-int kogus = 6; //muutuja mida tsükkel kasutab töötlemiseks mingisugusel kujul
-for (int k = 0; k < kogus; k++)//kaitstud sõna "for" alustab for tsüklit, pärast mida on sulud, mille vahel on kõik tsükli töö joaks
-//vajalik info. esimene parameeter tekitab tsükli tõõ joaks muutuja "int k = 0;",teine parameeter on
-//tingimuslause mis kontrollib tingimuse täitumist "k < kogus; ning kolmas inkementeerib tekitatud
-//muutujat "k++;".pane tähele et iga sulgude vahel oleva osa järel on lauselõpumärk. Tsükli tööd
-//kontrolliv tingimuslause koosneb kolmest reast, mitte ühest, nagu while, või do-while puhul.
-//koodiplokk kus tehakse mingi tegevus
-//antud juhul on tegevuseks muutuja "K" arvu väljakuvamine
-{
-    Console.WriteLine(k);
-}
-//võimalikud komposiitandmetüübid:
-// [] -> Massiiv on komposiitandmetüüp, mille sees saab olla mitemid samat tüüpi lihtandmeid. Massiivi tähistatakse kantsusulgude.
-//       Massiive saab olla ükskõik millest lihtandmetüüpi massiive.
-// Massiivi tekitamisel tuleb ära öelda kui pikk või suur massiiv on
-//Massiiv saab  olla koostatud ka teistest massiividest
+//}
+//// 3. for
+//int kogus = 6; //muutuja mida tsükkel kasutab töötlemiseks mingisugusel kujul
+//for (int k = 0; k < kogus; k++)//kaitstud sõna "for" alustab for tsüklit, pärast mida on sulud, mille vahel on kõik tsükli töö joaks
+////vajalik info. esimene parameeter tekitab tsükli tõõ joaks muutuja "int k = 0;",teine parameeter on
+////tingimuslause mis kontrollib tingimuse täitumist "k < kogus; ning kolmas inkementeerib tekitatud
+////muutujat "k++;".pane tähele et iga sulgude vahel oleva osa järel on lauselõpumärk. Tsükli tööd
+////kontrolliv tingimuslause koosneb kolmest reast, mitte ühest, nagu while, või do-while puhul.
+////koodiplokk kus tehakse mingi tegevus
+////antud juhul on tegevuseks muutuja "K" arvu väljakuvamine
+//{
+//    Console.WriteLine(k);
+//}
+////võimalikud komposiitandmetüübid:
+//// [] -> Massiiv on komposiitandmetüüp, mille sees saab olla mitemid samat tüüpi lihtandmeid. Massiivi tähistatakse kantsusulgude.
+////       Massiive saab olla ükskõik millest lihtandmetüüpi massiive.
+//// Massiivi tekitamisel tuleb ära öelda kui pikk või suur massiiv on
+////Massiiv saab  olla koostatud ka teistest massiividest
 
-int[] arvuMassiiv = new int[3];//andmetüüp int väljendab et tegu on täisarvutüüpi andmega ja kantsulud väljendavad et tegu ühltasi
-//ka massiiviga. nimeks on "arvuMassiiv" ja võrdusmärgiga, on esimene tekitusmoodus öelda et tegu on
-//uue massiiviga kasutades kaitstud sõna "new", ja sellele järgneb massiivi pikkuse sätestus "int[3]"
-//see tähendab et sii massiivis on 3 elementi, mis on täisarvud.
-int[] arvuMassiiv2 = [1, 2, 3]; //teine massiivi tekitusviis, kus järjendi pikkuse sätestamise aseal, pannakse elemendid kohe sisse
-//järjendi pikkus tuletatakse elementi arvust
-// -- massiivi sisesmised meetodid:
-//massiivi meetod "Lenght" mille me saame kasutusele võtta punkti abil, loendab kokku, mitu
-//elementi järjendis
+//int[] arvuMassiiv = new int[3];//andmetüüp int väljendab et tegu on täisarvutüüpi andmega ja kantsulud väljendavad et tegu ühltasi
+////ka massiiviga. nimeks on "arvuMassiiv" ja võrdusmärgiga, on esimene tekitusmoodus öelda et tegu on
+////uue massiiviga kasutades kaitstud sõna "new", ja sellele järgneb massiivi pikkuse sätestus "int[3]"
+////see tähendab et sii massiivis on 3 elementi, mis on täisarvud.
+//int[] arvuMassiiv2 = [1, 2, 3]; //teine massiivi tekitusviis, kus järjendi pikkuse sätestamise aseal, pannakse elemendid kohe sisse
+////järjendi pikkus tuletatakse elementi arvust
+//// -- massiivi sisesmised meetodid:
+////massiivi meetod "Lenght" mille me saame kasutusele võtta punkti abil, loendab kokku, mitu
+////elementi järjendis
+
+    string valik = "";
+
+    while (true)
+    {
+        Console.WriteLine("Tere! Millise kujuga on su tuba?");
+        Console.WriteLine("1 - Ristkülik");
+        Console.WriteLine("2 - Kolmnurk");
+        Console.WriteLine("3 - Ring");
+        Console.WriteLine("Kirjuta 'välju' kui soovid lõpetada.");
+        Console.Write("Vali number või käsk: ");
+        valik = Console.ReadLine()?.Trim().ToLower();
+
+        if (valik == "välju")
+        {
+            Console.WriteLine("Aitäh! Programm lõpetatud.");
+            break;
+        }
+
+        if (valik == "1")
+        {
+            Console.Write("Sisesta toa pikkus: ");
+            double pikkus = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Sisesta toa laius: ");
+            double laius = Convert.ToDouble(Console.ReadLine());
+
+            double pindala = pikkus * laius;
+            Console.WriteLine("Ristküliku toa pindala on: " + pindala + " ruutmeetrit.");
+        }
+        else if (valik == "2")
+        {
+            Console.Write("Sisesta kolmnurga alus: ");
+            double alus = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Sisesta kolmnurga kõrgus: ");
+            double kõrgus = Convert.ToDouble(Console.ReadLine());
+
+            double pindala = (alus * kõrgus) / 2;
+            Console.WriteLine("Kolmnurga toa pindala on: " + pindala + " ruutmeetrit.");
+        }
+        else if (valik == "3")
+        {
+            Console.Write("Sisesta ringi raadius: ");
+            double raadius = Convert.ToDouble(Console.ReadLine());
+
+            double pindala = 3.14 * raadius * raadius;
+            Console.WriteLine("Ringi toa pindala on: " + pindala + " ruutmeetrit.");
+        }
+        else
+        {
+            Console.WriteLine("Vale valik! Palun proovi uuesti.");
+        }
+    }
+        
+    
