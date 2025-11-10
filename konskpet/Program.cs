@@ -734,6 +734,60 @@ using System.Numerics;
 //    //ka omakorda jutumärkide vahel. Jutumärgid tähistavad sõnet.
 
 
+//4. foreach
+int[] arvuLoend = { 3, 89, 123412, 7, 67 };//massiiv mida foreach tsükkel kasutab,või töötleb mingil kujul.
+foreach ( var arvInLoend in arvuLoend)
+//kaitstud sõna foeach alustab foreach tsükli. Pärast mida on sulud, mille vahel tekitatakse
+//ajutine muutuja andmetüübiga "var" töödeldava andmekogumi üksikelemdi joaks. sünntaksis olev
+//kaitstud sõna "in" väljendab et tsükkel käib selle loendi elemntide kohta, ming var "arvInloend
+//muutuja hoiab endas just peale sõna  "in oleva andmekgumi elementi.Tsüklil ei ole nähtavat
+//tsüklimuutujat ega tigimust, tsükkel toimib niikaua kuni elemnte jätkub ehk tsükli töö käib
+//iga üksiku elemndi kohta andmekogumis. Tsükkel käivitatakse.
+//sisse ehitatud vikimisi elemdi järjestus jälgimine. Niipalju kui andemid on,ongi see,
+{
+    Console.WriteLine(arvInLoend);//mitu korda tsükkel käivitatakse.
+                                  //{}koodiplokk kus tehakse mingi tegevus
+}
+//2.loend:
+//List<T>->-> Loend on komposiitandmetüüp, mille sees saab olla mitmeid tüüpi liht ja komposiitandmeid. Loend-tüüpi andemid tähistatakse
+//täiendava andmetüübikirjeldusega "List" mille järel noolsugludesse asetatakse mis tüüpi andmeid loendis on.
+//Loendi tekitamsiel, erinevalt massiivist,ei pea ütlema kui pikk loend on.loendisse saab dünaamiliselt elemnte juurde
+//lisada, ehk tema pikkus ei ole fikseeritud.
+//Sarnsaselt massiiviga, saab loen omada endas, teisi loendeid.
+//esimene tekitusviis
+List<int> arvuNimekiri = new List<int>();//andmetüübi kirjeldus "List<>"näitab et tegu on loendiga, List noolsugude vahel on loendis
+//olevate andmete andmetüüp. muutuja nimeks on "arvNimekiri" Omisatme sellesse muutujasse
+//kaitstud sõna "new" abil uue tühja täisarvuloendi sätestusega "List<int>()".
+
+//Teine tekitusviis:
+List<int> arvuNimekiri2 = new List<int>() { 1, 2, 3 };//teine loendi tekitusviis, muutja instatnseerimine võrdusmärgi ees on sama nagu
+//esimesel, juurde tuleb ainult võrdusmärgi taga olevale sätestusele loogilised
+//sulud koos juba sinu astatud elemetniga.Enam ei ole tegu tühja nimekirjaga,
+//vaid loendiga kus on kolm elemnti.
+
+// Kolmas tekitusviis:
+List<int> arvNimekiri3 = new List<int>(3);//kolmas loendi tekitusviis kas muutuja instantseerimine jääb samaks, aga. tavaliste sulgud
+//vahel, sarnasaselt massiiviga, saame anda loendile esialgu suuruse. Loend ise ei oma veel
+//andmeid, aga loendis on kolm tühja elementi. Nimelt,oon sätestusel, peale andmetüüpi
+//kirjeldavaid noolsulge, paar tavailisi  sulge, mille sisse saab parameetrina panna loendi
+//pikkuse.()
+
+// --Loendi siseesmised meetoid:
+arvuNimekiri.Add(67);//Loendi meetod "Add()" lisab enne punkti olevale järjendile uue elemdile, elemnt mida lisada, on Add meetodi
+//sulgude vahel.Elementi saab lisada otse (antud juhul "67") või muutujana - näiteks...Add(arv);
+
+int LoendiPikkus =  arvuNimekiri.Count();//Loendi meetod "Count()" loeb kokku mitu elemnti järjendis on,meetod tagastab täisarvu
+//mis vastab elementide kogusele.
+bool kasSeeArvon = arvuNimekiri.Contains(3);//Loendi meetod "Contains()"otsib kogu järjendi seest elemeti,mis vastab sulgude vahel
+//olevale parameetrile, tagasatab kas tue või false - on leitud või ei ole.Tegemist on
+//põhimõtteliselt foreach tsükliga, mis otsib kindlat parameetrid,töötaldes läbi, kogu
+//loendi.
+
+arvuNimekiri.Remove(4); //Loedi meetod "Remove()" eemaldab enne punkti olevast loendist,kindlat asukohal oleva elemndi.sulgude
+//vahel on parameetriks eemaldatava elemndi asukohajärjelorranumber.
+
+
+
 string valik;
 double pindala = 0;
 
