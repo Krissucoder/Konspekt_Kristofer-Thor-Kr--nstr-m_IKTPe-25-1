@@ -784,50 +784,72 @@ bool kasSeeArvon = arvuNimekiri.Contains(3);//Loendi meetod "Contains()"otsib ko
 //loendi.
 
 arvuNimekiri.Remove(4); //Loedi meetod "Remove()" eemaldab enne punkti olevast loendist,kindlat asukohal oleva elemndi.sulgude
-//vahel on parameetriks eemaldatava elemndi asukohajärjelorranumber.
+//vahel on parameetriks eemaldatava elemndi asukohajärjelorranumber.TY UIÜ
 
 
+/*meetodid*/
 
-string valik;
-double pindala = 0;
+//meetodid on väljaaskutavas koodijupid. Meetodid teostavad tavaliselt mingeid funtsioone või tegevusi.
+//meetodid lasevad programmerijal taaskasutada oma eelnevat kirjutatud koodi- write once use many time.
+//meetodeid on kahte liiki - ühed, mis tagasavad andmeid mingisuuse töö tulemina, ja teised,mis ei tagasta
+//midagi, kuid omavad mingit tegevust
 
-Console.WriteLine("Tere! Kas sinu tuba on kolmnurk, ristkülik või ring?");
-valik = Console.ReadLine();
-
-if (valik == "kolmnurk")
+//meetodi signatuur
+//meetodi signatuur koosneb mitmest kindalt äramääratud omadusest, nendeks on:
+//-juurdepääsu modifaaktor mis ütleb ära,kust ja kuidas meetodile juurde pääseda saab
+// public-meetod on avalik ja kättesaadav ka teistes klassies peale slle,kus meetod ise asub 
+//private-metod on saadavainult selles klassis,kus meetod ise asub
+//protected-meetod on saadav ainult selles klassis, kus meetod ise asub ja kõikides klassies milles on pärilus
+//sellele klassile
+//iternal-meetod on saadav ainult selles klassis ja ainult selles failis
+//-võib olla ka pandud static - 
+public static void UusMeetod()
 {
-    Console.WriteLine("Sisesta A külg:");
-    double a_külg = double.Parse(Console.ReadLine());
-    Console.WriteLine("Sisesta B külg:");
-    double b_külg = double.Parse(Console.ReadLine());
-    Console.WriteLine("Sisesta C külg:");
-    double c_külg = double.Parse(Console.ReadLine());
-
-
-    pindala = (a_külg + b_külg + c_külg) / 2;
-
-    Console.WriteLine("Kolmnurga pindala on " + pindala + " ruutmeetrit");
+    Console.WriteLine("Tere");
 }
-else if (valik == "ristkülik")
-{
-    Console.WriteLine("Sisesta ristküliku pikkus:");
-    double pikkus = double.Parse(Console.ReadLine());
-    Console.WriteLine("Sisesta ristküliku laius:");
-    double laius = double.Parse(Console.ReadLine());
 
-    pindala = pikkus * laius;
-    Console.WriteLine("Ristküliku pindala on " + pindala + " ruutmeetrit");
-}
-else if (valik == "ring")
-{
-    Console.WriteLine("Sisesta ringi raadius:");
-    double raadius = double.Parse(Console.ReadLine());
 
-    pindala = 3.14 * raadius * raadius;
-    Console.WriteLine("Ringi pindala on " + pindala + " ruutmeetrit");
-}
-else
-{
-    Console.WriteLine("Sinu toa pindala on");
-}
+
+//string valik;
+//double pindala = 0;
+
+//Console.WriteLine("Tere! Kas sinu tuba on kolmnurk, ristkülik või ring?");
+//valik = Console.ReadLine();
+
+//if (valik == "kolmnurk")
+//{
+//    Console.WriteLine("Sisesta A külg:");
+//    double a_külg = double.Parse(Console.ReadLine());
+//    Console.WriteLine("Sisesta B külg:");
+//    double b_külg = double.Parse(Console.ReadLine());
+//    Console.WriteLine("Sisesta C külg:");
+//    double c_külg = double.Parse(Console.ReadLine());
+
+
+//    pindala = (a_külg + b_külg + c_külg) / 2;
+
+//    Console.WriteLine("Kolmnurga pindala on " + pindala + " ruutmeetrit");
+//}
+//else if (valik == "ristkülik")
+//{
+//    Console.WriteLine("Sisesta ristküliku pikkus:");
+//    double pikkus = double.Parse(Console.ReadLine());
+//    Console.WriteLine("Sisesta ristküliku laius:");
+//    double laius = double.Parse(Console.ReadLine());
+
+//    pindala = pikkus * laius;
+//    Console.WriteLine("Ristküliku pindala on " + pindala + " ruutmeetrit");
+//}
+//else if (valik == "ring")
+//{
+//    Console.WriteLine("Sisesta ringi raadius:");
+//    double raadius = double.Parse(Console.ReadLine());
+
+//    pindala = 3.14 * raadius * raadius;
+//    Console.WriteLine("Ringi pindala on " + pindala + " ruutmeetrit");
+//}
+//else
+//{
+//    Console.WriteLine("Sinu toa pindala on");
+//}
 
