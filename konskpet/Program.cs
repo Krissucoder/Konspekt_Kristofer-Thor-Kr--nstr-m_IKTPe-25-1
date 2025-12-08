@@ -786,6 +786,31 @@ bool kasSeeArvon = arvuNimekiri.Contains(3);//Loendi meetod "Contains()"otsib ko
 arvuNimekiri.Remove(4); //Loedi meetod "Remove()" eemaldab enne punkti olevast loendist,kindlat asukohal oleva elemndi.sulgude
 //vahel on parameetriks eemaldatava elemndi asukohajärjelorranumber.TY UIÜ
 
+/*´Matemaatilised tehted moodulist math*/
+
+Math.Round(d);//moodulist "Math kutsutakse punkti abil esile maatod "Round".sulgude vahel on ümardatav arv
+//round ümardab sulgude vahel olevas muutujas asetseva arvu, vastavalt komakohtade parameetrile
+//Väikeväärtusena, lähima täisarvuni 0-4 on allapoole 5-9 on ülespoole
+double newpi = Math.PI;//moodulis "Math" kutsutakse punkti abil esile kaitstud väärtus,PI mis välejdab matemaatilist
+//pi-d ning saab kasytada kui tavaline arv
+double astendus = Math.Pow(2, 2);//moodulist "Math" kustsutakse punkti abil eslile meetod "Pow" (power) sulude vahel on
+//kaks parameetrir esimene on neist astendatav ja teine astendaja antud julgul oleks
+//vastuseks 16
+
+/*Castimine*/
+
+//astimine on viis, kuidas ühest andmetüübist teist saada. Castimist on kahte eri liiki, automaatne ja manuaalne
+//Automaatne castimine toimbub siis, kui teisendatakse väiksemast andmetüübist, suuremasse
+//Manuaalne castimine toimbub siis, kui tehtakse saada suuremast andmetüübist väiksemat
+//Castimine nii,et teisendava muutuja ette, pannakse sulud koos soovitud andmetüübiga
+
+double newData1 = 2.22d;//tekitame, või on olemas, suure mahuga andmed muutujas nreData1 Tegu on double andmetega
+float data1Float = (float)newData1;//"(float)"teisendab double tüüpi andmed float tüüpi andmeteks
+long data1Long = (long)newData1;//"(long)" teisendab double tüüpi andmed long tüüpi andmeteks
+int data1Int = (int)newData1;//"(int)"teisendab double tüüpi andmed int tüüpi andmeteks
+char data1Char = (char)newData1;//"(char)"
+
+
 
 /*meetodid*/
 
